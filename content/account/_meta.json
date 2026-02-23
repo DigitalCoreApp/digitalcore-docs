@@ -1,5 +1,7 @@
 {
-  "subscriptions": "Subscriptions",
-  "manage-account": "Manage Account",
-  "security": "Security"
+  "index": "Overview",
+  "pricing": "Pricing & Plans",
+  "subscription": "Managing Your Subscription",
+  "security": "Security",
+  "profile": "Profile Settings"
 }

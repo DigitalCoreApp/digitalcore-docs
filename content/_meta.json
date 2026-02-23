@@ -1,11 +1,11 @@
 {
-  "index": "Introduction",
+  "index": "What is DigitalCore?",
   "getting-started": "Getting Started",
-  "platform": "Platform",
-  "service-economics": "Service Economics",
-  "integrations": "Integrations",
-  "api": "API Reference",
+  "concepts": "Concepts",
+  "guides": "Guides",
+  "platform": "Platform Reference",
   "playbooks": "Playbooks",
+  "mcp-and-integrations": "MCP & Integrations",
   "account": "Account",
   "changelog": "Changelog",
   "faq": "FAQ"

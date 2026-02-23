@@ -1,6 +1,8 @@
 {
-  "quickstart": "Quickstart",
-  "first-engagement": "First Engagement",
-  "import-data": "Import Data",
-  "invite-team": "Invite Team"
+  "index": "Quickstart Overview",
+  "organisation": "Create Your Organisation",
+  "core-entities": "Services, Engagements & Contracts",
+  "templates": "Configure Your Templates",
+  "first-checkin": "Your First Check-in",
+  "dashboard": "Reading Your Dashboard"
 }
