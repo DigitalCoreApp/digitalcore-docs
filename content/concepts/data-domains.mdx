@@ -1,0 +1,95 @@
+---
+title: "The Three Data Domains"
+description: "Finance, Performance, and Capacity — the three domains that DigitalCore connects into a unified service economics view."
+---
+
+# The Three Data Domains
+
+## Finance Domain
+
+### What It Tracks: P&L per Engagement
+
+The Finance domain tracks profit-and-loss data for each engagement: revenue, costs, and the resulting margins. Every finance item has a planned value (target) and an actual value per month.
+
+### Categories: Revenue, Cost of Goods Sold, Operating Expenses
+
+Finance items are categorised following standard P&L structure:
+
+- **Revenue** — Recurring fees, project revenue, ad-hoc charges
+- **Cost of Goods Sold (COGS)** — Direct costs: labour, materials, subcontractors
+- **Operating Expenses** — Indirect costs: tooling, overhead, management
+
+### Planned vs. Actual Values
+
+For each item, each month, you set a planned value (what you expect) and record an actual value (what happened). DigitalCore calculates the variance and assigns a RAG status.
+
+### How Costs Can Be Entered Manually or Calculated Automatically
+
+Most cost items are entered manually during monthly check-ins. However, two categories are calculated automatically:
+
+- **Labour costs** — Generated from capacity hours × hourly rates
+- **SLA penalties** — Generated from performance breach detection
+
+---
+
+## Performance Domain
+
+### What It Tracks: KPIs and SLAs per Engagement
+
+The Performance domain tracks key performance indicators and service level agreements. Each KPI has a target, thresholds, and monthly actual values.
+
+### Measurement Direction: Higher-is-Better, Lower-is-Better, Target-is-Best
+
+Each KPI is configured with a direction:
+
+- **Higher-is-better** — e.g., Customer Satisfaction (CSAT): 95% is better than 90%
+- **Lower-is-better** — e.g., Average Response Time: 2 hours is better than 4 hours
+- **Target-is-best** — e.g., Utilisation Rate: 80% target, both over and under are bad
+
+### Targets, Amber Bands, and Thresholds
+
+Each KPI can have:
+
+- **Target** — The ideal value
+- **Amber threshold** — The warning zone (not yet failed, but needs attention)
+- **Red threshold** — The failure zone (SLA breach if exceeded/missed)
+
+### What Happens When an SLA Is Breached
+
+When an actual value crosses the SLA threshold defined in the contract, DigitalCore automatically detects the breach, calculates the penalty, logs a penalty event, and optionally creates a finance entry.
+
+---
+
+## Capacity Domain
+
+### What It Tracks: Hours per Role per Engagement
+
+The Capacity domain tracks how many hours each role spends on each engagement. "Senior Consultant — 160 hours planned, 172 hours actual" for a given month.
+
+### FTE Derivation from Hours
+
+DigitalCore automatically converts hours to FTE equivalents based on standard working hours per month. If your standard is 160 hours/month and someone logs 80 hours, that's 0.5 FTE.
+
+### Utilisation and Billable/Non-Billable Split
+
+Utilisation rate compares actual hours against available capacity. Capacity items can distinguish billable from non-billable hours, enabling accurate utilisation tracking.
+
+### How Logged Hours Automatically Generate Finance Costs
+
+When actual hours are entered, DigitalCore multiplies them by the applicable hourly rate and creates a corresponding finance entry. The rate is looked up from (in priority order): contract-specific engagement rates, contract-level rates, rate card defaults.
+
+---
+
+## How the Three Domains Connect
+
+### Capacity Feeds Finance: Hours Become Labour Costs
+
+This is the primary cross-domain automation. Every capacity hour entry potentially creates a finance cost entry. The linking is automatic — the system knows which finance line item corresponds to which capacity role through the catalog.
+
+### Performance Feeds Finance: SLA Breaches Become Penalty Costs
+
+The second cross-domain automation. When a performance KPI breaches its SLA threshold, the resulting penalty amount is posted to the finance domain as a cost entry.
+
+### Unified Health Scoring Across All Three
+
+Engagement health is scored across all three domains. A healthy engagement has good financial margins, KPIs meeting targets, and capacity utilisation in the right range. A problem in any domain affects the overall health score.

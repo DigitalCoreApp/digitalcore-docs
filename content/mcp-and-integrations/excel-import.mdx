@@ -1,0 +1,58 @@
+---
+title: "Excel / CSV Import"
+description: "Import services, engagements, contracts, and financial data in bulk from Excel or CSV files."
+---
+
+# Excel / CSV Import
+
+## Supported Import Types
+
+### Entity Import: Services, Engagements, Contracts, Partners
+
+Import core entities in bulk when onboarding an existing portfolio. Each entity type has a dedicated import template with the required and optional fields.
+
+### Financial Data Bulk Import
+
+Import historical financial data (planned and actual values) for existing engagements. Useful for migrating from spreadsheets or other tracking systems.
+
+---
+
+## Preparing Your File
+
+### Download a Template
+
+Download the pre-formatted Excel template for your import type from the Bulk Upload page. Templates include column headers, data types, example rows, and validation notes.
+
+### Required and Optional Columns
+
+Each template clearly marks which columns are required (e.g., entity name, reference ID) and which are optional (e.g., description, category). Required fields that are empty will generate validation errors.
+
+### Format Requirements
+
+- **File formats**: `.xlsx`, `.xls`, `.csv`
+- **Date format**: `YYYY-MM-DD`
+- **Currency**: Numeric values without currency symbols
+- **Text encoding**: UTF-8 (for CSV files)
+
+---
+
+## Upload Workflow
+
+### Configuration → Bulk Upload
+
+Navigate to **Configuration → Bulk Upload** and select the entity type to import.
+
+### Staging, Validation, and Confirmation Steps
+
+Upload your file to enter the staging view. Each row is validated against the schema — valid rows are green, errors are highlighted in red with messages. Fix errors in the staging table or re-upload. Click **Confirm** when all rows validate.
+
+---
+
+## Troubleshooting Imports
+
+### Common Errors and How to Fix Them
+
+- **"Required field missing"** — Check the template for required columns and fill them in
+- **"Invalid date format"** — Use YYYY-MM-DD format
+- **"Reference not found"** — The entity you reference (e.g., a service name) doesn't exist yet — create it first or fix the spelling
+- **"Duplicate detected"** — An entity with the same key fields already exists — choose to skip or update

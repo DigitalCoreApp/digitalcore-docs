@@ -1,14 +1,14 @@
 {
   "index": "Overview",
-  "monthly-checkin": "Running a Monthly Check-in",
+  "monthly-checkin": "Monthly Check-in",
   "template-setup": "Setting Up Templates",
-  "scenarios": "Creating and Evaluating Scenarios",
-  "executive-summaries": "Building an Executive Summary",
-  "rate-cards": "Configuring Rate Cards",
-  "data-import": "Importing Data from Excel/CSV",
-  "sla-management": "Managing SLA Penalties",
-  "governance": "Using Governance and Decisions",
+  "scenarios": "Creating Scenarios",
+  "executive-summaries": "Executive Summaries",
+  "rate-cards": "Rate Cards & Pricing",
+  "data-import": "Data Import",
+  "sla-management": "SLA Management",
+  "governance": "Governance & Decisions",
   "ai-assistant": "Using the AI Assistant",
-  "portfolio-dashboard": "Reading the Portfolio Dashboard",
-  "strategy": "Strategy, OKRs & AI Initiatives"
+  "portfolio-dashboard": "Portfolio Dashboard",
+  "strategy": "Strategy & OKRs"
 }

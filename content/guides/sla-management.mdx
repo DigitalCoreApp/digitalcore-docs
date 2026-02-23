@@ -1,0 +1,66 @@
+# Managing SLA Penalties and Contract Terms
+
+DigitalCore automatically detects SLA breaches and can generate penalty entries when performance thresholds are crossed.
+
+---
+
+## Understanding SLA Breach Detection
+
+### When Does DigitalCore Check for Breaches?
+
+Breach detection runs automatically every time a performance actual is entered — either through the check-in grid or via the AI assistant. It checks the entered value against the contract's SLA terms for that KPI.
+
+### How Thresholds and Operators Work
+
+Each SLA term defines a threshold value and an operator:
+
+- **"Less than" operator**: A breach occurs when the actual is *below* the threshold (e.g., Availability < 99.5%)
+- **"Greater than" operator**: A breach occurs when the actual *exceeds* the threshold (e.g., Response Time > 4 hours)
+
+---
+
+## Configuring Contract Performance Terms
+
+### Linking a KPI to a Contract
+
+In the contract detail, add a performance term for each KPI with financial consequences. You select the KPI from the performance catalog, ensuring consistency with the engagement's performance template.
+
+### Setting Threshold Values
+
+Set the threshold that defines the boundary between compliance and breach. This should match the agreed contractual SLA target.
+
+### Choosing Penalty Type
+
+| Type | Description |
+|------|-------------|
+| **Fixed** | A flat amount per breach (simple, predictable) |
+| **Percentage** | Based on the contract's monthly or total value (scales with contract size) |
+| **Tiered** | Multiple penalty levels based on severity (rewards near-misses, penalises major failures) |
+
+---
+
+## What Happens When a Breach Occurs
+
+### Penalty Event Created
+
+A penalty event record is created with the details: which KPI, what was the actual value, what was the threshold, and the calculated penalty amount. This provides a complete audit trail.
+
+### Auto-Generated Finance Entry
+
+If the SLA term has auto-create enabled, a corresponding cost entry is added to the finance domain. The cost amount equals the calculated penalty and is attributed to the correct finance line item.
+
+### Where to Find Penalty Records
+
+Penalty events are visible in the engagement's detail view. Each event links to the originating performance measure and (if applicable) the resulting finance entry.
+
+---
+
+## Reviewing and Overriding
+
+### Viewing Penalty Events
+
+Navigate to the engagement and look for SLA penalty events. Each shows the KPI, period, actual value, threshold, and calculated penalty.
+
+### Manual Adjustments
+
+In some cases, contractual negotiations may result in waived or reduced penalties. You can manually adjust the finance entry amount without deleting the penalty event, preserving the audit trail.

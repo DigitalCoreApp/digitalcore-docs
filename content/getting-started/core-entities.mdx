@@ -1,0 +1,65 @@
+---
+title: "Services, Engagements & Contracts"
+description: "Create your first service, engagement, and contract — the core entities that structure your data in DigitalCore."
+---
+
+# Services, Engagements & Contracts
+
+## Create a Service
+
+### What is a Service in DigitalCore?
+
+A service is the thing you deliver — "Managed IT Support," "Brand Strategy Consulting," "Cloud Infrastructure Management," or "Fundraising Program." Services are organisation-level entities that can have multiple engagements under them.
+
+### Service Fields
+
+- **Name** — A clear, descriptive name for the service
+- **Description** — What this service delivers
+- **Category** — Group services by type (e.g., Managed Services, Consulting, Support)
+- **Owner** — The person responsible for this service's overall performance
+
+### Assigning to a Portfolio
+
+Portfolios are optional groupings that cut across services. You might have a "Key Accounts" portfolio or a "Public Sector" portfolio. Assign a service to one or more portfolios for top-level health views and strategic grouping.
+
+---
+
+## Create an Engagement
+
+### What is an Engagement?
+
+An engagement is a specific instance of delivering a service to a specific customer over a defined period. If "Managed IT Support" is the service, then "Managed IT Support for Acme Corp — 2025" is the engagement. All financial tracking, performance measurement, and capacity planning in DigitalCore happens at the engagement level.
+
+### Engagement Fields
+
+- **Name** — Identifies this specific engagement
+- **Service** — Which service this engagement belongs to
+- **Status** — Draft, Active, On Hold, Completed, or Archived
+- **Period** — Start and end dates for the engagement
+
+### Linking Engagements to Services
+
+Every engagement must be linked to exactly one service. This creates the hierarchy: Organisation → Service → Engagement. The service provides the grouping; the engagement provides the data.
+
+### Delivery Parties: Who Consumes vs. Who Delivers
+
+Each engagement can have delivery parties assigned — the customer (who receives the service) and the deliverer (who provides it). These parties, drawn from your Engagement Delivery configuration, enable tracking which organisation is responsible for each cost line, KPI, or capacity allocation.
+
+---
+
+## Create a Contract
+
+### What is a Contract?
+
+A contract is the commercial wrapper around one or more engagements. It defines the financial terms: contract value, type (fixed-fee, time-and-materials, etc.), billing dates, rate overrides, and SLA terms with penalty definitions.
+
+### Contract Fields
+
+- **Name** — Identifies the contract
+- **Type** — Fixed-fee, time-and-materials, milestone-based, or other
+- **Value** — Total contract value
+- **Dates** — Start date, end date, renewal date
+
+### Linking Contracts to Engagements
+
+Link a contract to one or more engagements. When linked, the contract's rate overrides apply to labour cost calculations for those engagements, and SLA terms trigger automatic penalty detection when performance actuals are entered.

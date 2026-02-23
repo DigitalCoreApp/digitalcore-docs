@@ -1,53 +1,89 @@
 ---
-title: "Playbooks"
-description: "Operational guides for common scenarios and best practices."
+title: "Playbooks in DigitalCore"
+description: "29 operational response guides for service management challenges — margin erosion, capacity shortfalls, SLA breaches, renewal risk, and more."
 ---
 
-# Playbooks
+# Playbooks in DigitalCore
 
-Step-by-step guides for common scenarios and best practices in DigitalCore.
+## What Are Playbooks?
 
-## What are playbooks?
+### Operational Response Guides for Service Management
 
-Playbooks are comprehensive guides that walk you through specific processes, decisions, or challenges you might face when managing service economics.
+Playbooks are structured response guides for common service management challenges. Each playbook addresses a specific situation — declining margins, capacity imbalance, client churn risk, scope creep — and provides a step-by-step framework for diagnosis and response.
 
-Each playbook includes:
-- **Context** — when and why to use it
-- **Steps** — detailed instructions
-- **Examples** — real-world scenarios
-- **Tips** — best practices and pitfalls
+DigitalCore includes 29 playbooks covering the full range of service economics challenges. Each playbook follows a consistent structure: warning signs, confirmed issue indicators, diagnostic questions, recommended actions, and expected outcomes.
 
-## Available playbooks
+### When to Activate — Warning Signs, Confirmed Issues, Diagnostics
 
-Playbooks are dynamically loaded from DigitalCore. Use the AI assistant to access them:
+Each playbook defines when to activate it:
 
-> "Show me the playbook for improving engagement margins"
+- **Warning Signs** — Early indicators that something may be developing (e.g., margin declining for 2 consecutive months)
+- **Confirmed Issues** — Definitive evidence the problem exists (e.g., margin below 20% for a quarter)
+- **Diagnostics** — Questions to ask and data to examine before deciding on a response
 
-> "What playbook helps with client negotiations?"
+### How Each Playbook Connects to Your Data in DigitalCore
 
-## Playbook categories
+Playbooks reference specific data you track in DigitalCore: finance actuals, KPI results, capacity utilisation, and health scores. When a playbook says "check cost variance," you can go directly to the engagement's finance grid and see the relevant numbers.
 
-**Financial**
-- Margin improvement
-- Pricing optimization
-- Cost reduction
+---
 
-**Operational**
-- Engagement kickoff
-- Resource allocation
-- Project recovery
+## Browse All Playbooks
 
-**Strategic**
-- Portfolio optimization
-- Service design
-- Client retention
+The full collection of 29 playbooks is published on the main site with detailed content for each:
 
-## Using playbooks
+**→ [Browse all playbooks at digitalcore.app/learn/playbooks](https://digitalcore.app/learn/playbooks)**
 
-1. Ask the AI assistant for a relevant playbook
-2. Review the context to confirm it applies
-3. Follow the steps in order
-4. Adapt to your specific situation
+---
+
+## Categories Overview
+
+### Margin & Profitability
+Protecting and improving engagement margins: gross margin erosion, cost overruns, pricing misalignment.
+
+### Pricing & Revenue
+Rate reviews, revenue leakage, contract pricing optimisation, and discount management.
+
+### Capacity & Staffing
+Resource planning, utilisation optimisation, bench management, and skills gap analysis.
+
+### Client & Renewal Risk
+Churn prevention, account health monitoring, stakeholder engagement, and renewal preparation.
+
+### Operational Efficiency
+Process optimisation, SLA improvement, automation opportunities, and delivery acceleration.
+
+### Scope & Contract Management
+Scope creep identification, change order processes, vendor management, and contract compliance.
+
+### Crisis & Escalation
+Delivery recovery plans, escalation frameworks, incident response, and crisis communication.
+
+---
+
+## Using Playbooks with the Platform
+
+### How Check-in Data Triggers Playbook Recommendations
+
+As you enter check-in data, DigitalCore's health scoring and AI capabilities can identify situations that match playbook activation criteria. The AI assistant can recommend relevant playbooks based on your engagement's current performance.
+
+### Connecting Playbook Actions to Scenarios
+
+Many playbooks recommend modelling the response before implementing it. Use [Scenario Intelligence](/docs/guides/scenarios) to create what-if models of the playbook's recommended actions — test the financial impact of a rate review, a staffing change, or a service redesign before committing.
+
+### Tracking Playbook Outcomes in Your Dashboard
+
+After implementing a playbook's recommendations, track the results through your regular check-in process. Compare pre-intervention and post-intervention metrics to measure effectiveness.
+
+---
+
+## Access via MCP
+
+Playbooks are also available through the free MCP server tools:
+
+- **`list_playbooks`** — Returns the full directory of all 29 playbooks
+- **`get_playbook`** — Retrieves a specific playbook by slug with full content
+
+See [Free MCP Server Setup](/docs/mcp-and-integrations/free-mcp) for configuration instructions.
 
 ## Contributing playbooks
 

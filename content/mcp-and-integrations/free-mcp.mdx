@@ -1,0 +1,115 @@
+---
+title: "Free MCP Server Setup"
+description: "Connect to DigitalCore's free MCP server — 6 tools for playbooks, KPI definitions, and quick health checks. No account required."
+---
+
+# Free MCP Server Setup
+
+## What's Included (6 Free Tools)
+
+| Tool | What It Does |
+|------|-------------|
+| **`get_playbook`** | Browse 29 service management playbooks with full content, warning signs, diagnostics, and recommended actions |
+| **`explain_metric`** | Get KPI formulas, calculation methods, industry benchmarks, and improvement tips for any service management metric |
+| **`run_service_reality_check`** | Calculate a quick health score from basic inputs: revenue, costs, FTEs, and SLA achievement percentage |
+| **`list_playbooks`** | Quick directory of all available playbooks with slugs and descriptions |
+| **`submit_email`** | Register to receive the Service Economics Guide and DigitalCore updates |
+| **`submit_feedback`** | Rate and comment on tool results to help improve the service |
+
+---
+
+## Quick Setup (Copy-Paste Configs)
+
+### Claude Desktop Configuration
+
+Add the following to your Claude Desktop config file (`claude_desktop_config.json`):
+
+```json
+{
+  "mcpServers": {
+    "digitalcore-free": {
+      "command": "npx",
+      "args": ["-y", "@anthropic-ai/mcp-remote", "https://mcpfree.digitalcore.app/mcp"]
+    }
+  }
+}
+```
+
+### Cursor Configuration
+
+In your Cursor MCP settings, add:
+
+```json
+{
+  "mcpServers": {
+    "digitalcore-free": {
+      "command": "npx",
+      "args": ["-y", "@anthropic-ai/mcp-remote", "https://mcpfree.digitalcore.app/mcp"]
+    }
+  }
+}
+```
+
+### VS Code / GitHub Copilot Configuration
+
+Add to your VS Code `settings.json` under `mcp.servers`:
+
+```json
+{
+  "mcp": {
+    "servers": {
+      "digitalcore-free": {
+        "command": "npx",
+        "args": ["-y", "@anthropic-ai/mcp-remote", "https://mcpfree.digitalcore.app/mcp"]
+      }
+    }
+  }
+}
+```
+
+### ChatGPT Configuration
+
+Use the ChatGPT app's MCP integration to connect to `https://mcpfree.digitalcore.app/mcp` using the streamable HTTP transport.
+
+### Windsurf Configuration
+
+Add to your Windsurf MCP settings:
+
+```json
+{
+  "mcpServers": {
+    "digitalcore-free": {
+      "command": "npx",
+      "args": ["-y", "@anthropic-ai/mcp-remote", "https://mcpfree.digitalcore.app/mcp"]
+    }
+  }
+}
+```
+
+---
+
+## Usage Examples
+
+### Browsing Playbooks
+
+Ask your AI assistant:
+
+> "Show me the playbook for margin erosion"
+
+> "What playbooks are available for client churn?"
+
+### Understanding Metrics
+
+Ask:
+
+> "Explain First Call Resolution — how is it calculated and what's a good target?"
+
+> "What is utilisation rate and how should I interpret it?"
+
+### Running a Quick Health Check
+
+Provide basic numbers:
+
+> "Run a service reality check: revenue €100,000, costs €75,000, 5 FTEs, 98% SLA achievement"
+
+The AI calculates a health score with commentary — no account needed.

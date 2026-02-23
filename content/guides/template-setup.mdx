@@ -1,0 +1,81 @@
+# Setting Up Templates for a New Engagement
+
+Templates define what you track on each engagement. This guide walks you through creating finance, performance, and capacity templates and assigning them to engagements.
+
+---
+
+## Before You Start
+
+### Ensure Catalog Items Exist
+
+Before creating templates, verify that the catalog items you need are already in the system:
+
+- **Finance Catalog** — P&L line items (revenue types, cost categories)
+- **Performance Catalog** — KPI definitions (metrics, measurement direction, default targets)
+- **Capacity Catalog** — Roles (job titles with default hourly rates)
+
+If you need new catalog items, add them first in **Configuration → Library / Catalogs**.
+
+### Understand How Templates Flow to Engagements
+
+Templates are reusable configurations that define what to track. When you assign a template to an engagement, engagement-level copies are created that inherit the template defaults but can be customised per engagement.
+
+---
+
+## Create a Finance Template
+
+### Adding P&L Line Items from the Finance Catalog
+
+Go to **Configuration → Templates → Finance**. Create a new template and give it a descriptive name (e.g., "Managed Services — Standard P&L"). Add items from the finance catalog: select revenue lines, COGS items, and operating expense items.
+
+### Configuring Default Values per Item
+
+For each item, you can optionally set default values — default planned amounts that pre-populate when the template is assigned. Leave defaults blank if targets vary per engagement.
+
+---
+
+## Create a Performance Template
+
+### Adding KPIs from the Performance Catalog
+
+Go to **Configuration → Templates → Performance**. Create a new template and add KPIs from the performance catalog. Each KPI inherits its measurement direction and default target from the catalog.
+
+### Setting Targets
+
+Override the default targets if needed for this template. For example, a premium service template might set Availability to 99.9% while a standard template uses 99.5%.
+
+---
+
+## Create a Capacity Template
+
+### Adding Roles from the Capacity Catalog
+
+Go to **Configuration → Templates → Capacity**. Create a new template and add roles from the capacity catalog. Each role inherits its default hourly rate.
+
+### Setting Planned Hours and FTE Targets
+
+For each role, set the baseline planned hours per month. DigitalCore automatically calculates the FTE equivalent.
+
+---
+
+## Assign Templates to an Engagement
+
+### What Gets Created Automatically
+
+When you assign a template to an engagement, DigitalCore creates engagement-level configurations for each template item. These are individual copies that can be customised without affecting the original template.
+
+### Verifying the Assignment
+
+After assignment, open the engagement's check-in tab. You should see the finance grid populated with the template's line items, the performance grid with KPIs, and the capacity grid with roles. All ready for targets and actuals.
+
+---
+
+## Advanced: Project Templates
+
+### Pre-Configured Workstreams, Milestones, and Deliverables
+
+Project templates are separate from the three data-domain templates. They define the timeline structure for project-based engagements: workstreams (phases), milestones (gates), and deliverables.
+
+### Reusing Project Structures Across Engagements
+
+Assign a project template to an engagement to create a pre-populated timeline. Adjust dates and details per engagement while maintaining a consistent project structure.

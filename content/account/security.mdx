@@ -1,66 +1,81 @@
 ---
 title: "Security"
-description: "Security settings, authentication, and access control."
+description: "Authentication, password policies, two-factor authentication, and account security best practices for DigitalCore."
 ---
 
 # Security
 
-Protect your DigitalCore account with strong security practices.
+Practical guidance for authentication, passwords, and account security.
 
-## Password requirements
+For comprehensive details on data residency, encryption, GDPR compliance, SOC 2 readiness, and audit logging, visit **[digitalcore.app/security](https://digitalcore.app/security)**.
 
-Passwords must include:
-- Minimum 12 characters
-- Uppercase and lowercase letters
-- At least one number
-- At least one special character
+---
 
-## Two-factor authentication (2FA)
+## Authentication
 
-Enable 2FA for additional security:
+### Email / Password Login
 
-1. Go to **Settings → Security**
-2. Click **Enable 2FA**
-3. Scan QR code with authenticator app
-4. Enter verification code
-5. Save backup codes
+DigitalCore uses email and password authentication. Enter your email and password at the login page to access your account.
 
-Supported apps:
-- Google Authenticator
-- Authy
-- 1Password
-- Microsoft Authenticator
+### Password Requirements
 
-## Single sign-on (SSO)
+Passwords must be:
 
-Enterprise plans support SSO with:
-- Okta
-- Azure AD
-- Google Workspace
+- At least 8 characters
+- Include a mix of letters and numbers
 
-Contact support to configure SSO.
+Stronger passwords (12+ characters with special characters) are recommended.
 
-## Session management
+---
 
-View and manage active sessions:
+## Password Management
 
-1. Go to **Settings → Security → Sessions**
-2. See all logged-in devices
-3. Click **Revoke** to log out a device
+### Changing Your Password
 
-## API key security
+Go to **Settings → Security → Change Password**. Enter your current password and choose a new one.
 
-- Generate keys at **Settings → API**
-- Keys inherit your permissions
-- Revoke keys immediately if compromised
-- Use separate keys for different integrations
+### Reset Password Flow
 
-## Security best practices
+If you've forgotten your password:
 
-- ✅ Enable 2FA
-- ✅ Use a password manager
-- ✅ Review sessions regularly
-- ✅ Rotate API keys periodically
-- ✅ Use SSO if available
+1. Click **Forgot Password** on the login page
+2. Enter your email to receive a reset link
+3. The link expires after 24 hours
+4. Click the link, set a new password, and log in
 
-→ [API Authentication](/docs/api/authentication)
+---
+
+## Account Security Best Practices
+
+### Use Strong, Unique Passwords
+
+Use a password manager to generate and store a unique password for your DigitalCore account. Don't reuse passwords across services.
+
+### Rotate API Keys Periodically
+
+If you use API keys for MCP or programmatic access, rotate them quarterly. See [API Keys](/docs/mcp-and-integrations/api-keys) for the rotation procedure.
+
+---
+
+## Data Isolation
+
+### Your Data is Isolated — Other Organisations Cannot See It
+
+DigitalCore enforces strict data isolation at the database level. Every query is filtered by your organisation's identity. Users in one organisation can never see, access, or modify data belonging to another organisation — even at the database level.
+
+---
+
+## Security & Compliance Details
+
+### Full Security Information
+
+For comprehensive details on:
+
+- Data residency
+- Encryption
+- GDPR compliance
+- SOC 2 readiness
+- Penetration testing
+- Audit logging
+
+Visit **[digitalcore.app/security](https://digitalcore.app/security)**.

@@ -5,12 +5,29 @@ import 'nextra-theme-docs/style.css'
 import '../styles/globals.css'
 
 export const metadata = {
+  metadataBase: new URL('https://www.digitalcore.app'),
   title: {
     default: 'DigitalCore Docs',
     template: '%s — DigitalCore Docs',
   },
   description: 'Product documentation, guides, and API reference for DigitalCore — Service Economics Intelligence.',
+  keywords: ['DigitalCore', 'service economics', 'service profitability', 'margin analysis', 'professional services', 'MSP', 'documentation'],
+  authors: [{ name: 'DigitalCore' }],
+  creator: 'DigitalCore',
+  publisher: 'DigitalCore',
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'DigitalCore Docs',
+    title: 'DigitalCore Documentation',
+    description: 'Product documentation, guides, and API reference for DigitalCore — Service Economics Intelligence.',
+  },
+  twitter: {
+    card: 'summary_large_image',
     title: 'DigitalCore Documentation',
     description: 'Product documentation, guides, and API reference for DigitalCore — Service Economics Intelligence.',
   },

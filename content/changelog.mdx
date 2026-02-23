@@ -1,59 +1,70 @@
 ---
 title: "Changelog"
-description: "Recent updates and changes to DigitalCore."
+description: "Product updates, new features, and release notes for DigitalCore."
 ---
 
 # Changelog
 
-Stay up to date with the latest features, improvements, and fixes.
+Product updates and release notes for DigitalCore.
 
 ---
 
-## v2.4.0 — 2025-01-15
+## February 2026
 
-### Features
-- **Portfolio Cockpit** — new dashboard for portfolio-wide visibility
-- **AI-powered scenario modeling** — ask "what if" questions naturally
-- **Whale curve visualization** — see profit distribution graphically
+### New Features
+
+- **AI Narrative Generation (Ollama-powered)** — Executive summaries and period narratives now use on-premise AI for faster, more private text generation with automatic cloud fallback.
+- **Redis Task Queue** — Background processing for AI workloads: narrative generation and period summaries run asynchronously without blocking the interface.
+- **4-Service Microservice Architecture** — Backend services split into independent containers (MCP, AI, Ingest, Sync) for isolated scaling and deployment.
+- **Delivery Attribution on Plans and Measures** — Track which party (customer or deliverer) is responsible for each planned and actual value across all three data domains.
 
 ### Improvements
-- Faster engagement loading (50% improvement)
-- Enhanced export options for reports
-- Mobile-responsive improvements
 
-### Fixes
-- Fixed margin calculation rounding errors
-- Corrected timezone handling in time entries
-- Resolved duplicate notification issues
+- Capacity check-in grid now shows FTE calculations alongside hours
+- Scenario comparison view redesigned with clearer financial impact summaries
+- Health score algorithm updated with configurable organisation-level RAG thresholds
+
+### Bug Fixes
+
+- Fixed profile settings loading race condition in production
+- Fixed performance check-in tabs passing null instead of omitting delivery party field
+- Fixed React Query hanging on initial load
 
 ---
 
-## v2.3.0 — 2024-12-01
+## January 2026
 
-### Features
-- **MCP Integration** — connect AI assistants to DigitalCore
-- **Advanced filtering** — save and share custom filters
-- **Bulk time entry** — enter time for multiple days at once
+### New Features
+
+- **Scenario Intelligence** — Create, evaluate, and commit what-if scenarios with AI-generated options
+- **Executive Summary Builder** — Multi-section reports with AI-generated narratives and PDF export
+- **Free MCP Server** — 6 public tools for playbook browsing, KPI education, and service health checks
+- **Paid MCP Server** — 13+ tools covering Monitor, Record, Diagnose, Plan, Decide, and Communicate capabilities
 
 ### Improvements
-- Improved API rate limiting headers
-- Better error messages throughout
-- Enhanced search performance
+
+- Aggregation engine with cooldown-based refresh and org-level threshold configuration
+- SLA breach detection upgraded to catalog-driven architecture (V3) for better cross-domain consistency
+- Labour cost automation upgraded to catalog-driven architecture (V2) with source tracking
+
+### Bug Fixes
+
+- Middleware session refresh now runs for all routes including public paths
+- Password reset flow rebuilt with correct token handling
+- Avatar upload fixed with correct environment variable naming
 
 ---
 
-## v2.2.0 — 2024-10-15
+## Format
 
-### Features
-- **Cost allocation rules** — configure how overhead is distributed
-- **Engagement templates** — create engagements from templates
-- **Slack integration** — receive notifications in Slack
+Each release entry includes:
 
-### Improvements
-- New onboarding flow for new users
-- Improved data import validation
-- Enhanced role-based permissions
+- **Date** — When the release was deployed
+- **Version** — Semantic version number
+- **What's New** — New features and capabilities
+- **What's Changed** — Improvements to existing features
+- **What's Fixed** — Bug fixes and corrections
 
 ---
 
-For the complete changelog, see [GitHub Releases](https://github.com/DigitalCoreApp/digitalcore/releases).
+*This changelog is updated with each release.*

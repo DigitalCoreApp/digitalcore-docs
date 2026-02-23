@@ -1,47 +1,73 @@
 ---
-title: "How do I manage services?"
-description: "Define and configure service offerings in DigitalCore."
+title: "Services"
+description: "Define and manage the services your organisation delivers. Configure service categories, default templates, and link services to engagements."
 ---
 
-# How do I manage services?
+# Configuration: Services
 
-Services represent the types of work your organization delivers to clients.
+Services represent the offerings your organisation delivers to customers.
 
-## What is a service?
+---
 
-A service is a repeatable offering, such as:
-- Cloud Migration
-- Managed Security Operations
-- Application Development
-- IT Support
+## Services List
 
-Engagements are instances of services delivered to specific clients.
+### Search and Filtering
 
-## How do I create a service?
+The Services page lists all services in your organisation. Use the search bar to find services by name, or filter by category and status.
 
-1. Navigate to **Services** in the sidebar
-2. Click **+ New Service**
-3. Define service name and description
-4. Set default pricing model
-5. Configure standard deliverables
-6. Save
+### Status Indicators
 
-## What can I configure?
+Each service shows a status badge:
 
-| Setting | Description |
-|---------|-------------|
-| **Pricing Model** | Fixed-fee, T&M, subscription |
-| **Standard Margin Target** | Expected margin % |
-| **Typical Duration** | Default engagement length |
-| **Required Roles** | Roles needed to deliver |
-| **Deliverables** | Standard outputs |
+| Status | Meaning |
+|--------|---------|
+| **Active** | Has engagements currently running |
+| **Inactive** | No active engagements |
+| **Draft** | Still being configured |
 
-## How do services help?
+---
 
-- **Benchmarking** — compare engagement margins against service averages
-- **Pricing** — use historical data to price new work
-- **Staffing** — know which roles are typically needed
-- **Reporting** — analyze profitability by service line
+## Service Detail
 
-→ [Engagements](/docs/platform/engagements)
-→ [Whale curve analysis](/docs/service-economics/whale-curve)
+### Overview: Name, Description, Category, Owner
+
+The service detail page shows:
+
+- **Name** — Service identifier
+- **Description** — What the service provides
+- **Category** — Classification for grouping
+- **Owner** — Assigned user within your organisation
+
+### Related Engagements
+
+A list of all engagements linked to this service, with their:
+
+- Status
+- Health score
+- Last check-in date
+
+Click through to any engagement's workspace.
+
+### Related Portfolios
+
+Shows which portfolios include this service. Useful for understanding how a service fits into the broader organisational structure.
+
+---
+
+## Creating and Editing a Service
+
+Click **Create Service** to add a new service. Fill in:
+
+1. Name
+2. Description
+3. Category
+4. Owner
+
+Save to create — you can then create engagements under this service. Edit any field at any time from the service detail page.
+
+---
+
+## Related Documentation
+
+- [Concepts: Engagements](/docs/concepts/engagements) — Understanding the service hierarchy
+- [Getting Started: Core Entities](/docs/getting-started/core-entities) — Setting up your first service

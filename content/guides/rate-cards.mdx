@@ -1,0 +1,63 @@
+# Configuring Rate Cards and Contract Pricing
+
+Rate cards define how DigitalCore calculates labour costs and how contract-specific pricing overrides organisation defaults.
+
+---
+
+## Set Up Organisation Rate Cards
+
+### Creating Roles in the Capacity Catalog
+
+Go to **Configuration → Library / Catalogs → Roles & Rates**. Add your organisation's standard roles: Senior Consultant, Project Manager, Service Desk Analyst, Developer, etc.
+
+### Adding Default Rates per Role
+
+For each role, set the default hourly rate. This rate is used for automatic labour cost calculations when no contract-specific override exists.
+
+---
+
+## Configure Contract-Specific Rates
+
+### Overriding Rates for Specific Contracts
+
+Open a contract's detail page and go to the **Rates** tab. Add rate overrides for specific roles. For example, if the standard rate for Senior Consultant is €150/hour but this contract specifies €135/hour, add the override here.
+
+### Engagement-Specific Rate Variants
+
+For maximum granularity, rates can be set with engagement-level specificity within a contract. This handles multi-engagement contracts where different engagements may have different pricing.
+
+---
+
+## Configure SLA Terms
+
+### Adding Performance Terms to a Contract
+
+In the contract detail, go to the **SLA Terms** tab. Add terms for each KPI that carries financial consequences:
+
+1. **Select the KPI** — from the performance catalog
+2. **Set the threshold** — the value that triggers a breach
+3. **Choose the operator** — greater than or less than
+4. **Define the penalty** — fixed amount, percentage, or tiered
+
+### Setting Thresholds and Penalty Types
+
+For tiered penalties, define multiple levels. Example for Availability:
+
+| Threshold | Penalty |
+|-----------|---------|
+| Below 99.5% | €1,000 |
+| Below 99.0% | €5,000 |
+| Below 98.0% | €15,000 |
+
+---
+
+## Verify Your Setup
+
+### Testing: How DigitalCore Selects the Right Rate
+
+Enter test capacity hours and verify that the automatic labour cost uses the expected rate. Check the finance grid to see which rate was applied.
+
+### Common Issues and Troubleshooting
+
+- **Wrong rate applied?** Check whether the contract rate is linked to the correct engagement. Contract-level rates override organisation defaults.
+- **No cost generated?** Verify that the capacity role has a linked finance catalog item (typically "Labour Cost — COGS").

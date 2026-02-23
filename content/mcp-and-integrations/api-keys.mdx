@@ -1,0 +1,66 @@
+---
+title: "API Keys"
+description: "Generate and manage API keys for paid MCP access and programmatic API use."
+---
+
+# API Keys
+
+## What Are API Keys?
+
+### Authentication for Paid MCP Access
+
+API keys authenticate your identity when using DigitalCore's paid MCP tools or programmatic API access. Each key is tied to your user account and inherits your organisation's data access permissions.
+
+---
+
+## Generating a Key
+
+### Settings → API Keys Tab
+
+Navigate to **Settings → API Keys** in the DigitalCore app. Click **Generate New Key**. Give the key a descriptive name (e.g., "Claude Desktop — Work Laptop").
+
+### Key Permissions
+
+Select the permission scope for the key:
+
+- **Read** — Monitor, diagnose, and query data only
+- **Read-Write** — All read permissions plus recording data and managing scenarios
+- **Admin** — Full access including configuration changes
+
+Use the minimum permission level needed for each use case.
+
+### Expiration Settings
+
+Set an expiration date for the key. Options include 30 days, 90 days, 180 days, 1 year, or a custom date. 90 days is recommended as a balance between security and convenience.
+
+---
+
+## Managing Keys
+
+### Viewing Active Keys
+
+The API Keys tab shows all your active keys with their names, permission level, creation date, expiration date, and last used date.
+
+### Revoking a Key
+
+Click **Revoke** to immediately disable a key. The key stops working instantly and cannot be re-enabled. Revocation is logged for audit purposes.
+
+### Key Rotation Best Practice
+
+Rotate keys before they expire. Generate a new key, update your MCP client configuration, verify connectivity, then revoke the old key. This avoids any downtime.
+
+---
+
+## Security Best Practices
+
+### Never Share Keys in Code Repositories
+
+API keys should never be committed to version control. Store them in your MCP client's local configuration file or in environment variables.
+
+### Use Scoped Permissions
+
+Create separate keys for different tools or workstations, each with the minimum required permissions. If one key is compromised, revoke it without affecting other integrations.
+
+### Rotate Keys Periodically
+
+Even if keys haven't expired, rotate them on a regular schedule (quarterly recommended). This limits the window of exposure if a key is silently compromised.

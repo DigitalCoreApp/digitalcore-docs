@@ -1,48 +1,83 @@
 ---
-title: "How do I manage contracts?"
-description: "Track contract terms, billing schedules, and renewals."
+title: "Contracts"
+description: "Configure contracts with commercial terms, rate cards, and SLA obligations. Link contracts to engagements for automated pricing calculations."
 ---
 
-# How do I manage contracts?
+# Configuration: Contracts
 
-Contracts define the commercial terms of your client engagements.
+Contracts define the commercial terms, rates, and SLA obligations for your engagements.
 
-## What contract details are tracked?
+---
+
+## Contracts List
+
+View all contracts with:
+
+- Name
+- Type
+- Total value
+- Start/end dates
+- Linked engagements
+
+Filter by type (Fixed Price, Time & Materials, Managed Service) or status (Active, Expired, Draft).
+
+---
+
+## Contract Detail
+
+### Overview: Name, Type, Value, Dates
+
+The contract header shows:
 
 | Field | Description |
 |-------|-------------|
-| **Contract Value** | Total amount |
-| **Billing Type** | Fixed-fee, T&M, subscription, hybrid |
-| **Payment Terms** | Net 30, milestones, etc. |
-| **Start/End Date** | Contract period |
-| **Renewal Terms** | Auto-renew, notice period |
-| **Rate Card** | Applicable billing rates |
+| **Name** | Contract identifier |
+| **Type** | Commercial type (Fixed Price, T&M, Managed Service) |
+| **Total Value** | Contract value and currency |
+| **Start Date** | When the contract begins |
+| **End Date** | When the contract expires |
+| **Renewal Date** | When renewal is due (if applicable) |
 
-## How do I create a contract?
+### Linked Engagements
 
-Contracts are created as part of engagement setup:
+Lists all engagements operating under this contract. A contract can cover multiple engagements.
 
-1. Create new engagement
-2. In the Contract section, enter terms
-3. Upload contract document (optional)
-4. Save
+### Rate Overrides
 
-## How does billing work?
+The Rates tab shows any role-based rate overrides specific to this contract. Default organisation rates apply for roles without overrides.
 
-DigitalCore generates billing based on contract type:
+See [Rate Cards Guide](/docs/guides/rate-cards) for configuration details.
 
-- **Fixed-fee**: Bill on milestones or schedule
-- **T&M**: Bill based on logged hours × rates
-- **Subscription**: Recurring billing
+### SLA Terms
 
-## How do I track renewals?
+The SLA Terms tab lists all performance terms with financial consequences:
 
-The Contracts view shows:
-- Upcoming renewals (next 90 days)
-- Expiring contracts
-- Renewal rate by client
+- KPI
+- Threshold
+- Operator
+- Penalty type
+- Penalty amount
 
-Set alerts for renewal dates in **Settings → Notifications**.
+See [SLA Management Guide](/docs/guides/sla-management) for configuration details.
 
-→ [Finance](/docs/platform/finance)
-→ [Engagements](/docs/platform/engagements)
+---
+
+## Creating and Editing a Contract
+
+Click **Create Contract** to add a new contract. Fill in:
+
+1. Name
+2. Type
+3. Value
+4. Dates
+5. Link to existing engagements
+
+Add rate overrides and SLA terms as needed.
+
+---
+
+## Related Documentation
+
+- [Rate Cards Guide](/docs/guides/rate-cards) — Configuring pricing
+- [SLA Management Guide](/docs/guides/sla-management) — Setting up breach detection
+- [Concepts: Rate Cards](/docs/concepts/rate-cards) — Understanding the rate hierarchy

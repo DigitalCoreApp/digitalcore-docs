@@ -1,54 +1,90 @@
 ---
-title: "How do I configure settings?"
-description: "Configure DigitalCore settings, preferences, and integrations."
+title: "Settings"
+description: "Configure your personal profile, security settings, two-factor authentication, and API keys for DigitalCore integrations."
 ---
 
-# How do I configure settings?
+# Settings: Profile, Security, API Keys
 
-The Settings area lets you customize DigitalCore for your organization.
+Personal settings for your DigitalCore account.
 
-## What settings are available?
+---
 
-**Organization Settings**
-- Company profile
-- Fiscal year
-- Currency
-- Time zones
+## Profile Tab
 
-**User Management**
-- Invite/remove users
-- Assign roles
-- Set permissions
+### Display Name, Avatar, Email
 
-**Finance Settings**
-- Cost rate defaults
-- Billing configuration
-- Revenue recognition rules
+- Update your display name
+- Upload an avatar image
+- Your email address is shown but can only be changed through the account security flow
 
-**Integrations**
-- Connect external systems
-- API keys
-- Webhooks
+---
 
-**Notifications**
-- Alert preferences
-- Email settings
-- In-app notification rules
+## Security Tab
 
-## How do I access settings?
+### Change Password
 
-1. Click the gear icon in the sidebar, or
-2. Navigate to **Settings** from the menu
+Change your password from the Security tab:
 
-## How do permissions work?
+1. Enter your current password
+2. Choose a new password meeting the minimum requirements
+3. Confirm and save
 
-DigitalCore uses role-based access control (RBAC):
+See [Security](/docs/account/security) for password requirements.
 
-| Role | Access Level |
-|------|--------------|
-| **Admin** | Full access to all settings |
-| **Manager** | Limited settings, no user management |
-| **Member** | Personal settings only |
+---
 
-→ [Invite team](/docs/getting-started/invite-team)
-→ [Security](/docs/account/security)
+## Notifications Tab
+
+### Notification Preferences
+
+Configure which notifications you receive:
+
+| Notification Type | Description |
+|-------------------|-------------|
+| **Check-in reminders** | Upcoming and overdue check-ins |
+| **SLA breach alerts** | When performance thresholds are crossed |
+| **Governance case updates** | Decision workflow changes |
+| **AI insight notifications** | New AI-generated recommendations |
+
+Toggle email and in-app notifications independently.
+
+---
+
+## API Keys Tab
+
+### Generating an API Key
+
+Generate API keys for programmatic access to DigitalCore — primarily for the Paid MCP server.
+
+Each key has:
+
+- Name
+- Permissions scope
+- Expiration date
+
+### Key Permissions
+
+Keys can be scoped to specific capabilities:
+
+| Scope | Access Level |
+|-------|--------------|
+| **Read-only** | View data only |
+| **Read-write** | View and modify data |
+| **Admin** | Full access |
+
+Use the minimum permissions needed for each integration.
+
+### Key Expiration
+
+All keys have an expiration date. Expired keys stop working automatically. Set expiration based on your security policy — **90 days is recommended**.
+
+### Revoking Keys
+
+Revoke a key at any time from the API Keys tab. Revoked keys stop working immediately. The revocation is logged for audit purposes.
+
+---
+
+## Related Documentation
+
+- [API Keys Guide](/docs/mcp-and-integrations/api-keys) — Detailed setup instructions
+- [Paid MCP Tools](/docs/mcp-and-integrations/paid-mcp) — Using API keys with MCP
