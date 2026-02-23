@@ -1,0 +1,53 @@
+---
+title: "How do I track financial performance?"
+description: "Track service-level P&L, margin, and automatic cost flow in DigitalCore's Finance module."
+---
+
+# How do I track financial performance?
+
+DigitalCore's Finance module tracks service-level P&L with automatic capacity-to-finance cost calculation.
+
+## How are margins calculated?
+
+DigitalCore calculates engagement margins using:
+
+```
+Gross Margin = Revenue - Direct Costs
+Margin % = (Gross Margin / Revenue) × 100
+```
+
+**Direct costs** include:
+- Labor costs (hours × internal cost rate)
+- Direct expenses (travel, materials, subcontractors)
+
+## What P&L categories does DigitalCore use?
+
+| Category | Description |
+|----------|-------------|
+| **Revenue** | Contract value, recognized based on billing model |
+| **Labor Cost** | Team hours × internal cost rates |
+| **Direct Expenses** | Non-labor costs allocated to engagement |
+| **Gross Margin** | Revenue minus all direct costs |
+| **Overhead Allocation** | Optional: allocated indirect costs |
+| **Net Margin** | Gross margin minus overhead |
+
+## How does automatic labor costing work?
+
+1. Team member logs hours to an engagement
+2. DigitalCore multiplies hours by their internal cost rate
+3. Cost flows automatically to the engagement P&L
+4. Margin updates in real-time
+
+No manual journal entries required.
+
+## How do I view financial reports?
+
+Navigate to **Finance** in the sidebar to access:
+
+- **Engagement P&L** — per-engagement profitability
+- **Portfolio Summary** — cross-engagement financials
+- **Trend Analysis** — margin trends over time
+- **Variance Reports** — budget vs. actual
+
+→ [Margin calculation details](/docs/service-economics/margin-calculation)
+→ [Cost attribution](/docs/service-economics/cost-attribution)

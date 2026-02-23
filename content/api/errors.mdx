@@ -1,0 +1,82 @@
+---
+title: "API Errors"
+description: "Understanding and handling DigitalCore API errors."
+---
+
+# API Errors
+
+How to understand and handle errors from the DigitalCore API.
+
+## Error format
+
+All errors return JSON:
+
+```json
+{
+  "error": {
+    "code": "invalid_request",
+    "message": "Engagement ID is required",
+    "details": {
+      "field": "engagement_id"
+    }
+  }
+}
+```
+
+## HTTP status codes
+
+| Code | Meaning |
+|------|---------|
+| `200` | Success |
+| `201` | Created |
+| `400` | Bad request — invalid input |
+| `401` | Unauthorized — invalid/missing API key |
+| `403` | Forbidden — insufficient permissions |
+| `404` | Not found — resource doesn't exist |
+| `409` | Conflict — duplicate or state conflict |
+| `422` | Validation error — invalid field values |
+| `429` | Rate limited — too many requests |
+| `500` | Server error — something went wrong |
+
+## Error codes
+
+| Code | Description |
+|------|-------------|
+| `invalid_request` | Malformed request |
+| `invalid_api_key` | API key is invalid |
+| `insufficient_permissions` | Key lacks required permission |
+| `resource_not_found` | Requested item doesn't exist |
+| `validation_error` | Field validation failed |
+| `rate_limit_exceeded` | Too many requests |
+| `internal_error` | Server-side error |
+
+## Handling errors
+
+```javascript
+const response = await fetch(url, options);
+
+if (!response.ok) {
+  const error = await response.json();
+  
+  switch (response.status) {
+    case 401:
+      // Re-authenticate
+      break;
+    case 429:
+      // Wait and retry
+      const retryAfter = response.headers.get('Retry-After');
+      break;
+    default:
+      console.error(error.error.message);
+  }
+}
+```
+
+## Rate limiting
+
+When rate limited:
+- Wait for `Retry-After` header seconds
+- Implement exponential backoff
+- Consider caching frequent requests
+
+→ [API Reference](/docs/api/reference)
