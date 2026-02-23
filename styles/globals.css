@@ -1,42 +1,16 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* DigitalCore brand palette */
+  --dc-primary: #4f46e5;       /* indigo-600 */
+  --dc-secondary: #7c3aed;     /* violet-600 */
+  --dc-success: #059669;        /* emerald-600 */
+  --dc-warning: #d97706;        /* amber-600 */
+  --dc-error: #dc2626;          /* red-600 */
+  --dc-text: #0f172a;           /* slate-900 */
+  --dc-text-secondary: #475569; /* slate-600 */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Override Nextra theme colors to match DigitalCore brand */
+.dark {
+  --dc-text: #f1f5f9;           /* slate-100 */
+  --dc-text-secondary: #94a3b8; /* slate-400 */
 }
